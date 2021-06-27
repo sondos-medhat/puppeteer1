@@ -19,5 +19,7 @@ RUN ls
 RUN pwd
 RUN npm install
 RUN npm test
+RUN ls
 RUN npm run report
-COPY cucumber-report.json /var/jenkins_home/cucumber-report.json
+RUN ls
+COPY /nodeapp/cucumber-report.json /var/jenkins_home/cucumber-report.json
