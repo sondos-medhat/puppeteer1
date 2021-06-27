@@ -19,16 +19,18 @@ When('open the Google page', async function () {
 
 When('search for chercher tech', async function () {
     await this.page.waitForSelector("[name='q']")
-    await this.page.type("[name='q']", "chercher tech")
-    await this.page.click("[name='btnK']")
+    await this.page.type("[name='q']", "sondos")
+//     await this.page.click("[name='btnK']")
+    await this.page.keyboard.press("Enter")
 });
 
 Then('Count the results', async function () {
-    var linkTexts = await this.page.$$eval(".plan-features a",
-                elements=> elements.map(item=>item.textContent))
+//     var linkTexts = await this.page.$$eval(".plan-features a",
+//                 elements=> elements.map(item=>item.textContent))
     // prints a array of text
-    console.log("here",linkTexts.length)
+//     console.log("here",linkTexts.length)
+    await this.browser.close()
 
     //uncomment close statement if you want
-    await this.browser.close()
+   
 });
