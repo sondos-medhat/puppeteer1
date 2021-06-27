@@ -6,7 +6,7 @@ var {setDefaultTimeout} = require('cucumber');
 setDefaultTimeout(60 * 1000);
 
 Given("The browser is open", async function(){
-    this.browser = await puppeteer.launch({headless:false})
+    this.browser = await puppeteer.launch()
     this.page = await this.browser.newPage();
 })
 
