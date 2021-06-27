@@ -27,8 +27,8 @@ Then('Count the results', async function () {
     var linkTexts = await this.page.$$eval(".plan-features a",
                 elements=> elements.map(item=>item.textContent))
     // prints a array of text
-    console.log(linkTexts.length)
+    console.log("here",linkTexts.length)
 
     //uncomment close statement if you want
-    //await this.browser.close()
+    await this.browser.close()
 });
