@@ -18,3 +18,4 @@ RUN  apt-get update \
 RUN npm install
 RUN npm test
 RUN npm run report
+COPY cucumber-report.json /var/jenkins_home/cucumber-report.json
