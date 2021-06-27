@@ -17,4 +17,4 @@ RUN  apt-get update \
      && chmod +x /usr/sbin/wait-for-it.sh
 RUN npm install
 RUN npm test
-
+RUN npm run report
